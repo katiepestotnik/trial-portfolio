@@ -1,0 +1,11 @@
+[{
+    "name":"Explore NASA",
+    "live":"https://explore-nasa.herokuapp.com",
+    "git":"https://github.com/katiepestotnik/space-project",
+    "image":"./explore-nasa.png"
+},{
+    "name":"My Japanese Library",
+    "live":"https://my-japanese-library.herokuapp.com/",
+    "git":"https://github.com/katiepestotnik/my-japanese-library",
+    "image":"./screenshot.png"
+}]
