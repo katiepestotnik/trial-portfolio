@@ -1,10 +1,13 @@
 const express = require('express');
 const cors = require('cors');
+// const methodOverride = require('method-override');
 const projects = require('./projects.json');
 const about = require('./about.json');
 const app = express();
 
 //MIDDLEWARE
+app.use(express.urlencoded({ extended: false }));
+// app.use(methodOverride('_method'));
 app.use(cors());
 //home
 app.get('/', (req, res) => {
@@ -17,6 +20,15 @@ app.get('/projects', (req, res) => {
 //about
 app.get('/about', (req, res) => {
     res.json(about)
+});
+//below routes for form
+//index
+app.get('/form/', (req, res) => {
+    res.send('testing');
+});
+app.post('/projects', (req, res) => {
+    projects.push(req.body);
+    res.redirect('/projects');
 });
 
 //PORT
