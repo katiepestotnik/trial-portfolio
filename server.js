@@ -26,9 +26,10 @@ app.get('/about', (req, res) => {
 app.get('/form/', (req, res) => {
     res.send('testing');
 });
-app.post('/projects', (req, res) => {
+
+app.post('/form', (req, res) => {
     projects.push(req.body);
-    res.redirect('/projects');
+    res.redirect('/');
 });
 
 //PORT
